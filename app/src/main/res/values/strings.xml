@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RestauranteApp.</string>
+    <string name="total_default">Total: $0</string>
+    <string name="incluir_propina">Incluir Propina</string>
+</resources>

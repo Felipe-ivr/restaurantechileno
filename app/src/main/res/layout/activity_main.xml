@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Título de la aplicación -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurante Chileno"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Imagen del pastel -->
+    <ImageView
+        android:id="@+id/imgPastel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Descripción del pastel -->
+    <TextView
+        android:id="@+id/tvPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo - $12,000"
+        app:layout_constraintTop_toTopOf="@id/imgPastel"
+        app:layout_constraintStart_toEndOf="@id/imgPastel"
+        android:layout_marginStart="8dp"/>
+
+    <!-- EditText para la cantidad de Pastel -->
+    <EditText
+        android:id="@+id/etCantidadPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tvPastel"
+        app:layout_constraintStart_toStartOf="@id/tvPastel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- EditText para la cantidad de Cazuela -->
+    <EditText
+        android:id="@+id/etCantidadCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad de Cazuela"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etCantidadPastel"
+        app:layout_constraintStart_toStartOf="@id/etCantidadPastel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- SwitchMaterial para la propina -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir_Propina"
+        app:layout_constraintTop_toBottomOf="@id/etCantidadCazuela"
+        app:layout_constraintStart_toStartOf="@id/etCantidadCazuela"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView para mostrar los resultados -->
+    <TextView
+        android:id="@+id/tvResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/swPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
